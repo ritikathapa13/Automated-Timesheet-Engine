@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+    <meta charset="utf-8"/>
+    <title>Work Report </title>
+    </head>
+    <style>
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    } 
+    table {
+        border-collapse:collapse;
+        width:70%;
+        margin: 20px;
+    }
+    th,td{
+        border:1px darkblue;
+        padding: 8px;
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    </style>
+    <body>
+        <h1>Work Report for {{name}} </h1>
+        {% if data %}
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Hours Worked</th>
+                <th>Project Code</th>
+            </tr>
+            {% for row in data %}
+            <tr>
+                <td>{{ row[0]}}</td>
+                <td>{{ row[1]}}</td>
+                <td>{{ row[2]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %} 
+        <p>No records found for {{ name }}.</p>
+         {% endif %}
+    </body>
+</html>

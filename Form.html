@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Form</title>
+        <script>
+                function toUpperCaseField()
+                {
+                    let input=document.getElementById("projectcode");
+                    input.value = input.value.toUpperCase();
+                }
+            </script>
+    </head>
+    <body>
+        <h1>Employee Entry Form</h1>
+        <form>
+            <label for="Employeename">Employee Name:</label><br>
+            <input id="Employeename"type="text"name="employee_name"><br>
+            <label for="date">Date:</label><br>
+            <input id="date" type="date"name="date"><br>
+            <label for="hoursworked">HoursWorked:</label><br>
+            <input id="hoursworked"type="number"name="hoursworked"><br>
+            <label for="projectcode">ProjectCode:</label><br>
+            <input id="projectcode"type="text"name="projectcode"onkeyup="this.value=this.value.toUpperCase();">
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
